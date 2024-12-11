@@ -1,0 +1,39 @@
+/* index.css */
+@import url('https://fonts.googleapis.com/css2?family=Oxanium:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Mona+Sans:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bruno+Ace:wght@400;700&display=swap');
+
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Dot under text on hover */
+.hover-dot::after {
+    content: '';
+    position: absolute;
+    bottom: -8px; /* Adjust distance from text */
+    left: 50%;
+    transform: translateX(-50%);
+    width: 4px; /* Dot size */
+    height: 4px;
+    background-color: currentColor; /* Matches text color */
+    border-radius: 50%; /* Makes it a circle */
+    opacity: 0; /* Hidden by default */
+    transition: opacity 0.3s ease-in-out;
+  }
+  
+  .hover-dot:hover::after {
+    opacity: 1; /* Dot appears on hover */
+  }
+  
+  html, body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    width: 100%;
+  }
+
+  html{
+    scroll-behavior: smooth;
+    }
